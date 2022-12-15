@@ -16,14 +16,14 @@ class AvatarWidget extends StatelessWidget {
       required this.thumbPath,
       this.hasStory,
       this.nickname,
-      this.size=65})
+      this.size = 65})
       : super(key: key);
 
   Widget type1Widget() {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 5),
       padding: const EdgeInsets.all(3),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
@@ -34,10 +34,10 @@ class AvatarWidget extends StatelessWidget {
     );
   }
 
-  Widget type2Widget(){
+  Widget type2Widget() {
     return Container(
       padding: const EdgeInsets.all(2),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         shape: BoxShape.circle,
         color: Colors.white,
       ),
@@ -55,6 +55,21 @@ class AvatarWidget extends StatelessWidget {
     );
   }
 
+  Widget type3Widget() {
+    return Row(
+      children: [
+        type2Widget(),
+        Text(
+          nickname ?? '',
+          style: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
+        )
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     switch (type) {
@@ -65,7 +80,7 @@ class AvatarWidget extends StatelessWidget {
         return type2Widget();
         break;
       case AvatarType.TYPE3:
-        return Container();
+        return type3Widget();
         break;
     }
   }

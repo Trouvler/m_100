@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1005582649639",
+    "project_id": "mountain-e6a92",
+    "storage_bucket": "mountain-e6a92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005582649639:android:a98bacb26b35b815d54102",
+        "android_client_info": {
+          "package_name": "com.example.m_100"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005582649639-hddeffcrr8jjslu18v6vbufhm0hd72jp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX4BH5q7Pt98rXrylkGmppTVFZXw13FEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005582649639-hddeffcrr8jjslu18v6vbufhm0hd72jp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

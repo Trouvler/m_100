@@ -1,28 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:get/get.dart';
 import 'package:m_100/src/components/avatar_widget.dart';
 import 'package:m_100/src/components/image_data.dart';
 
+
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
-  Widget _mystory() {
-    return Stack(
-      children: [
-        AvatarWidget(
-            type: AvatarType.TYPE2,
-            size: 70,
-            thumbPath:
-            'https://soichi04.com/wp-content/uploads/2022/08/remove-background-before-qa1.png'),
-      ],
-    );
-  }
 
   Widget _imagePreview() {
-    return Container(
-      width: Get.width,
-      height: Get.width * 0.5,
-      color: Colors.grey,
+    return ImageSlideshow(
+      /// Width of the [ImageSlideshow].
+      width: double.infinity,
+      height: 200,
+      initialPage: 0,
+      indicatorColor: Colors.blue,
+      indicatorBackgroundColor: Colors.grey,
+
+      /// Called whenever the page in the center of the viewport changes.
+      onPageChanged: (value) {
+        print('Page changed: $value');
+      },
+
+      /// Auto scroll interval.
+      /// Do not auto scroll with null or 0.
+      autoPlayInterval: 5000,
+
+      /// Loops back to first slide.
+      isLoop: true,
+      children: [
+        Image.network(
+          'https://soichi04.com/wp-content/uploads/2022/08/remove-background-before-qa1.png',
+          fit: BoxFit.cover,
+        ),
+        Image.network(
+          'http://thumbnail.10x10.co.kr/webimage/image/basic600/149/B001497625-2.jpg?cmd=thumb&w=500&h=500&fit=true&ws=false',
+          fit: BoxFit.cover,
+        ),
+        Image.network(
+          'https://i.pinimg.com/originals/5b/71/81/5b7181665b406f117129e04203ddccc4.jpg',
+          fit: BoxFit.cover,
+        ),
+      ],
     );
   }
 
@@ -50,7 +70,7 @@ class Home extends StatelessWidget {
 
   Widget _imageSelectList() {
     return GridView.builder(
-      physics: const NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
@@ -59,8 +79,9 @@ class Home extends StatelessWidget {
           crossAxisSpacing: 1,
         ),
         itemCount: 100,
-        itemBuilder: (BuildContext context, int index){
-          return Container(color: Colors.red,
+        itemBuilder: (BuildContext context, int index) {
+          return Container(
+            color: Colors.red,
           );
         });
   }
@@ -81,17 +102,15 @@ class Home extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(children: [
-        _mystory(),
         const SizedBox(
           width: 5,
         ),
         ...List.generate(
-            100,
-                (index) =>
-                AvatarWidget(
+            5,
+            (index) => AvatarWidget(
                   type: AvatarType.TYPE1,
                   thumbPath:
-                  'https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E',
+                      'https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E',
                 )),
       ]),
     );
