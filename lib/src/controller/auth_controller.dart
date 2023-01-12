@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:m_100/src/binding/init_bindings.dart';
 import 'package:m_100/src/models/m100_user.dart';
 import 'package:m_100/src/repository/user_repository.dart';
 
@@ -10,9 +11,14 @@ class AuthController extends GetxController{
   static AuthController get to => Get.find();
 
   Rx<MUser> user = MUser().obs;
-  Future<MUser?> login_user(String uid)async{
-    //DB조회
+  Future<MUser?> loginUser(String uid)async{
     var userData = await UserRepository.loginUserByUid(uid);
+    if(userData!=null){
+      user(userData);
+      InitBinding.additionalBinding();
+    }
+    //DB조회
+
     print(userData);
     return userData;
   }
@@ -44,7 +50,7 @@ class AuthController extends GetxController{
     void _submitSignup(MUser signUser) async {
       var result = await UserRepository.signup(signUser);
       if (result){
-        user(signUser);
+        loginUser(signUser.uid!);
       }
 
     }

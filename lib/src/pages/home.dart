@@ -3,14 +3,16 @@ import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:get/get.dart';
 import 'package:m_100/src/components/avatar_widget.dart';
 import 'package:m_100/src/components/image_data.dart';
+import 'package:m_100/src/components/mlist_widget.dart';
 
+import '../models/mList_provider.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
-
   Widget _imagePreview() {
     return ImageSlideshow(
+
       /// Width of the [ImageSlideshow].
       width: double.infinity,
       height: 200,
@@ -68,76 +70,54 @@ class Home extends StatelessWidget {
     );
   }
 
-  Widget _imageSelectList() {
-    return GridView.builder(
-        physics: const NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          childAspectRatio: 1,
-          mainAxisSpacing: 1,
-          crossAxisSpacing: 1,
-        ),
-        itemCount: 100,
-        itemBuilder: (BuildContext context, int index) {
-          return Container(
-            color: Colors.red,
-          );
-        });
-  }
-
-  Widget _postlist() {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          _imagePreview(),
-          _header(),
-          _imageSelectList(),
-        ],
-      ),
-    );
-  }
-
   Widget _storyBoardList() {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(children: [
-        const SizedBox(
-          width: 5,
-        ),
-        ...List.generate(
-            5,
-            (index) => AvatarWidget(
-                  type: AvatarType.TYPE1,
-                  thumbPath:
-                      'https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E',
-                )),
-      ]),
-    );
+    return Row(children: [
+      const SizedBox(
+        width: 5,
+      ),
+      ...List.generate(
+          5,
+              (index) =>
+              AvatarWidget(
+                type: AvatarType.TYPE1,
+                thumbPath:
+                'https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E',
+              )),
+    ]);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 1,
-        title: ImageData(IconPath.logo, width: 270),
-        actions: [
-          GestureDetector(
-            onTap: () {},
-            child: ImageData(
-              IconPath.directMessage,
-              width: 50,
-            ),
-          )
-        ],
-      ),
-      body: ListView(
-        children: [
-          _storyBoardList(),
-          _postlist(),
-        ],
-      ),
+    return CustomScrollView(
+      slivers: <Widget>[
+        SliverAppBar(
+          elevation: 1,
+          title: ImageData(IconPath.logo, width: 270),
+          actions: <Widget>[
+            GestureDetector(
+                onTap: () {},
+                child: ImageData(
+                  IconPath.directMessage,
+                  width: 50,
+                ))
+          ],
+        ),
+        SliverToBoxAdapter(
+          child: Container(
+            child:
+            _imagePreview(),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Container(
+            child: _header(),
+          ),
+        ),
+        MlistWidget(),
+        //
+      ],
     );
   }
 }
+
+

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:m_100/firebase_options.dart';
 import 'package:m_100/root.dart';
+import 'package:m_100/src/models/mList_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:m_100/src/binding/init_bindings.dart';
 
 void main() async {
@@ -19,17 +21,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
-          titleTextStyle: TextStyle(color: Colors.black)
-        )
+    return MultiProvider(
+      providers:[
+        ChangeNotifierProvider(create: (BuildContext context) => MListProvider()),
+      ],
+      child: GetMaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.white,
+            titleTextStyle: TextStyle(color: Colors.black)
+          )
+        ),
+        initialBinding: InitBinding(),
+        home: const Root(),
       ),
-      initialBinding: InitBinding(),
-      home: const Root(),
     );
   }
 }

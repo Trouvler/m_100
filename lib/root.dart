@@ -16,7 +16,7 @@ class Root extends GetView<AuthController> {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (BuildContext _, AsyncSnapshot<User?> user) {
           if (user.hasData) {
-            controller.login_user(user.data!.uid);
+            controller.loginUser(user.data!.uid);
             return FutureBuilder<MUser>(
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
