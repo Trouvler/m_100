@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:m_100/src/components/avatar_widget.dart';
@@ -5,10 +7,14 @@ import 'package:m_100/src/components/image_data.dart';
 import 'package:m_100/src/controller/auth_controller.dart';
 import 'package:m_100/src/controller/mypage_controller.dart';
 
+import '../controller/bottom_nav_controller.dart';
+
 class Mypage extends GetView<MypageController> {
   const Mypage({Key? key}) : super(key: key);
 
+
   Widget _statlisticOne(String title, int value) {
+    print("123");
     return Column(
       children: [
         Text(
@@ -31,6 +37,9 @@ class Mypage extends GetView<MypageController> {
   }
 
   Widget _infomation() {
+    print("1234");
+    List<dynamic>? mtComList = controller.userinfo.value.mtcomList;
+    List<dynamic>? mtWishList = controller.userinfo.value.mtwishList;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 25),
       child: Obx(
@@ -52,9 +61,9 @@ class Mypage extends GetView<MypageController> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _statlisticOne('달성', 15),
-                      _statlisticOne('미달성', 15),
-                      _statlisticOne('찜', 15),
+                      _statlisticOne('달성',controller.userinfo.value.mtcomList == null ? -1 :controller.userinfo.value.mtcomList!.length),
+                      _statlisticOne('미달성', controller.userinfo.value.mtcomList == null ? -1 :100-controller.userinfo.value.mtcomList!.length),
+                      _statlisticOne('찜', controller.userinfo.value.mtwishList == null ? -1 : controller.userinfo.value.mtwishList!.length),
                     ],
                   ),
                 ),
@@ -75,6 +84,7 @@ class Mypage extends GetView<MypageController> {
   }
 
   Widget _menu() {
+    print("1236");
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: Row(
@@ -102,6 +112,7 @@ class Mypage extends GetView<MypageController> {
   }
 
   Widget _tabMenu() {
+    print("1237");
     return TabBar(
         controller: controller.tabController,
         indicatorColor: Colors.black,
@@ -119,6 +130,7 @@ class Mypage extends GetView<MypageController> {
   }
 
   Widget _tabView() {
+    print("123123");
     return GridView.builder(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
@@ -138,6 +150,7 @@ class Mypage extends GetView<MypageController> {
 
   @override
   Widget build(BuildContext context) {
+    print("1245513");
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -187,4 +200,6 @@ class Mypage extends GetView<MypageController> {
       ),
     );
   }
+
+
 }

@@ -20,9 +20,12 @@ class _SignupPageState extends State<SignupPage> {
   TextEditingController descriptionController = TextEditingController();
   final ImagePicker _picker = ImagePicker();
   XFile? thumbnailXfild;
-  void update() => setState(() {
 
-  });
+  void update() =>
+      setState(() {
+
+      });
+
   Widget _avatar() {
     return Column(
       children: [
@@ -32,7 +35,7 @@ class _SignupPageState extends State<SignupPage> {
             width: 200,
             height: 200,
             child: thumbnailXfild != null
-                ? Image.file(File(thumbnailXfild!.path),fit: BoxFit.cover,)
+                ? Image.file(File(thumbnailXfild!.path), fit: BoxFit.cover,)
                 : Image.asset(
               'assets/images/default_image.png',
               fit: BoxFit.cover,

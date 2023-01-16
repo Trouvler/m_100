@@ -3,12 +3,14 @@ class MUser {
   String? nickname;
   String? thumbnail;
   String? description;
+  List<String>? mtcomList;
 
   MUser({
     this.uid,
     this.nickname,
     this.thumbnail,
     this.description,
+    this.mtcomList,
   });
 
   factory MUser.fromJson(Map<String, dynamic> json) {

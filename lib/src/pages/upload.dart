@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:http/http.dart';
 import 'package:m_100/src/components/image_data.dart';
+import 'package:nfc_manager/nfc_manager.dart';
+import 'dart:typed_data';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Upload extends StatelessWidget {
   const Upload({Key? key}) : super(key: key);
+
 
   Widget _imagePreview() {
     return Container(
@@ -48,4 +53,31 @@ class Upload extends StatelessWidget {
       ),
     );
   }
+}
+
+class UploadStateful extends StatefulWidget{
+  const UploadStateful({Key? key}) : super(key: key);
+
+  @override
+  State<UploadStateful> createState() => readNfc();
+  }
+
+class readNfc extends State<UploadStateful>{
+
+  @override
+  void initState () async {
+    super.initState();
+  }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+
+      ),
+    );
+  }
+
+
+
+
 }
