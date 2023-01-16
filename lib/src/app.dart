@@ -19,7 +19,7 @@ class App extends GetView<BottomNavController> {
           body: IndexedStack(
             index: controller.pageIndex.value,
             children: [
-              const Home(),
+              Home(),
               const Search(),
               Container(
                 child: Text('Upload'),

@@ -1,11 +1,16 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:get/get.dart';
 import 'package:m_100/src/components/avatar_widget.dart';
 import 'package:m_100/src/components/image_data.dart';
+import 'package:m_100/src/controller/mlist_controller.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+import 'mt_info.dart';
+
+class Home extends GetView<MlistController> {
+  Home({Key? key}) : super(key: key);
 
   Widget _imagePreview() {
     return ImageSlideshow(
@@ -67,34 +72,26 @@ class Home extends StatelessWidget {
   }
 
   Widget _imageSelectList() {
-    return ListView.separated(
-      physics: const NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      itemCount: 100,
-      itemBuilder: (BuildContext context, int index) {
-        return ListTile(
-          leading: Icon(Icons.person),
-          title: Text("관광지"),
-          subtitle: Text("${index}번째"),
-        );
-      },
-      separatorBuilder: (context, index) {
-        if (index == 0) return SizedBox.shrink();
-        return const Divider();
-      },
-    );
-  }
-
-  Widget _postlist() {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          _imagePreview(),
-          _header(),
-          _imageSelectList(),
-        ],
-      ),
-    );
+    return Obx(() {
+      var info = controller.mlist;
+      return ListView.separated(
+        physics: const NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        itemCount: info.length,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            leading: Icon(Icons.map),
+            title: Text(info[index].mntnm.toString()),
+            subtitle: Text(info[index].mntnm.toString()),
+            onTap: () {Get.to(() => MtInfo(), arguments: index);},
+          );
+        },
+        separatorBuilder: (context, index) {
+          if (index == 0) return SizedBox.shrink();
+          return const Divider();
+        },
+      );
+    });
   }
 
   Widget _storyBoardList() {
@@ -133,7 +130,9 @@ class Home extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          _postlist(),
+          _imagePreview(),
+          _header(),
+          _imageSelectList(),
         ],
       ),
     );

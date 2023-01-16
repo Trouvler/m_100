@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:m_100/src/components/image_data.dart';
+import 'package:m_100/src/controller/search_mlist.dart';
+
+import 'mt_info.dart';
 
 class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);
@@ -14,13 +17,14 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     tabController = TabController(length: 5, vsync: this);
-  }
 
+  }
+  var seachController =SearchMlistController();
   late TabController tabController;
 
   Widget _tabMenueOne(String menu) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 15.0),
+      padding: const EdgeInsets.symmetric(vertical: 15.0),
       child: Text(
         menu,
         style: const TextStyle(
@@ -48,10 +52,8 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
             controller: tabController,
             indicatorColor: Colors.black,
             tabs: [
-              _tabMenueOne('인기'),
+              _tabMenueOne('이름'),
               _tabMenueOne('지역'),
-              _tabMenueOne('태그'),
-              _tabMenueOne('난이도'),
             ]),
       ),
     );
@@ -63,12 +65,34 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
       children: const [
         Center(child: Text('지역페이지'),),
         Center(child: Text('인기페이지'),),
-        Center(child: Text('태그페이지'),),
-        Center(child: Text('난이도페이지'),),
       ],
     );
   }
 
+  Widget _searchList(info){
+    return ListView.separated(
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      itemCount: info.length,
+      itemBuilder: (BuildContext context, int index) {
+        return ListTile(
+          leading: Icon(Icons.map),
+          title: Text(info[index].mntnm.toString()),
+          subtitle: Text(info[index].mntnm.toString()),
+          onTap: () {Get.to(() => MtInfo(), arguments: index);},
+        );
+      },
+      separatorBuilder: (context, index) {
+        if (index == 0) return SizedBox.shrink();
+        return const Divider();
+      },
+    );
+  }
+
+   Future loadData(String text) async => Obx((){
+       var result = seachController.fetchSearchlist(text);
+       return result;
+    });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,8 +111,12 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
             borderRadius: BorderRadius.circular(6),
             color: const Color(0xffefefef),
           ),
-          child: const TextField(
-            decoration: InputDecoration(
+          child: TextField(
+            keyboardType: TextInputType.text,
+            onChanged: (text) {
+              loadData(text);
+            },
+            decoration: const InputDecoration(
               border: InputBorder.none,
               hintText: '검색',
               contentPadding: EdgeInsets.only(left: 15, top: 7, bottom: 7),
