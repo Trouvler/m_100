@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:m_100/firebase_options.dart';
 import 'package:m_100/root.dart';
-import 'package:m_100/src/models/mList_provider.dart';
-import 'package:provider/provider.dart';
 import 'package:m_100/src/binding/init_bindings.dart';
 
 void main() async {

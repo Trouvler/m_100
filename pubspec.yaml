@@ -31,6 +31,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  nfc_manager: ^3.2.0
+
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -50,6 +53,10 @@ dependencies:
   provider: ^6.0.5
   http: ^0.13.5
   xml2json: ^5.3.6
+  fluttertoast: ^8.1.2
+  xml: ^6.1.0
+  dio: ^4.0.6
+
 
 dev_dependencies:
   flutter_test:

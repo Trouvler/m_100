@@ -89,10 +89,10 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
     );
   }
 
-   Future loadData(String text) async => Obx((){
-       var result = seachController.fetchSearchlist(text);
-       return result;
-    });
+   // Future loadData(String text) async => Obx((){
+   //     var result = seachController.fetchSearchlist(text);
+   //     //return result;
+   //  });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,7 +114,7 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
           child: TextField(
             keyboardType: TextInputType.text,
             onChanged: (text) {
-              loadData(text);
+              //loadData(text);
             },
             decoration: const InputDecoration(
               border: InputBorder.none,
