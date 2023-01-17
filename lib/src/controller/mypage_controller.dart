@@ -39,9 +39,6 @@ class MypageController extends GetxController with GetTickerProviderStateMixin{
         .collection('MtDoneList')
         .doc(auth.currentUser?.uid)
         .get();
-    List<dynamic> mtCompleteList = data['DoneList'];
-    List<dynamic> wishList = data['WishList'];
-    print('tlqksdkasknckxjc');
     print(data.data());
     var result = MUserinfo.fromJson(data.data());
     print(result);
@@ -49,7 +46,6 @@ class MypageController extends GetxController with GetTickerProviderStateMixin{
   }
 
   void increase() {
-    print("이거되니?");
     _loadUserData();
     print(userinfo.value.mtcomList);
     update();
