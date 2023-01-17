@@ -92,19 +92,23 @@ class Mypage extends GetView<MypageController> {
         child: Row(
           children: [
             Expanded(
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 4.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(3),
-                  border: Border.all(color: const Color(0xffdedede)),
-                ),
-                child: const Text(
-                  '프로필 수정',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 14,
+              child: InkWell(
+                onTap: () {print('adssad');},
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 4.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(3),
+                    border: Border.all(color: const Color(0xffdedede)),
                   ),
-                  textAlign: TextAlign.center,
+                  child: const Text(
+                    '기념품 신청',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+
                 ),
               ),
             )
@@ -207,7 +211,7 @@ class Mypage extends GetView<MypageController> {
             ),
           ),
         ],bottom: PreferredSize(
-        preferredSize: Size.fromHeight(AppBar().preferredSize.height*4), child: Column(children: [
+        preferredSize: Size.fromHeight(AppBar().preferredSize.height*4.1), child: Column(children: [
         _infomation(),
         _menu(),
         _tabMenu(),
