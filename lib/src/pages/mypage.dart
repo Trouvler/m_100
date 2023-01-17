@@ -151,8 +151,11 @@ class Mypage extends GetView<MypageController> {
             crossAxisSpacing: 1,
           ),
           itemBuilder: (BuildContext context, int index) {
-            return Container(
-              color: Colors.grey,
+            return InkWell(
+              onTap: (){print("object{$index}");},
+              child: Container(
+                color: Colors.grey,
+              ),
             );
           }),
       GridView.builder(
@@ -165,8 +168,11 @@ class Mypage extends GetView<MypageController> {
             crossAxisSpacing: 1,
           ),
           itemBuilder: (BuildContext context, int index) {
-            return Container(
-              color: Colors.red,
+            return InkWell(
+              onTap: (){print("object{$index}");},
+              child: Container(
+                color: Colors.red,
+              ),
             );
           }),
     ]);
