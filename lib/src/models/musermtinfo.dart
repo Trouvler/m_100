@@ -14,11 +14,4 @@ class MUserinfo {
     );
   }
 
-  // Map<String, dynamic> toMap() {
-  //   return {
-  //     'DoneList':mtcomListjson,
-  //     'WishList':mtwishListjson,
-  //   };
-  // }
-
 }
