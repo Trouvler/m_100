@@ -16,10 +16,11 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 5, vsync: this);
-
+    tabController = TabController(length: 2, vsync: this);
   }
-  var seachController =SearchMlistController();
+
+  String? title;
+  late String inText;
   late TabController tabController;
 
   Widget _tabMenueOne(String menu) {
@@ -59,40 +60,71 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
     );
   }
 
-  Widget _body(){
+  Widget _body(text) {
     return TabBarView(
       controller: tabController,
-      children: const [
-        Center(child: Text('지역페이지'),),
-        Center(child: Text('인기페이지'),),
+      children: [
+        _searchList(text),
+        Center(
+          child: Text('인기페이지'),
+        ),
       ],
     );
   }
 
-  Widget _searchList(info){
-    return ListView.separated(
-      physics: const NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      itemCount: info.length,
-      itemBuilder: (BuildContext context, int index) {
-        return ListTile(
-          leading: Icon(Icons.map),
-          title: Text(info[index].mntnm.toString()),
-          subtitle: Text(info[index].mntnm.toString()),
-          onTap: () {Get.to(() => MtInfo(), arguments: index);},
-        );
-      },
-      separatorBuilder: (context, index) {
-        if (index == 0) return SizedBox.shrink();
-        return const Divider();
-      },
+  Widget _searchList(text) {
+    //Get.find<SearchMlistController>().msearchArlist(text);
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: TabBarView(
+        controller: tabController,
+        children: [
+          ListView.separated(
+            shrinkWrap: true,
+            itemCount: Get.find<SearchMlistController>().msearchNmlist.value.length,
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                leading: Icon(Icons.map),
+                title: Text(Get.find<SearchMlistController>().msearchNmlist.value[index].mntnm.toString()),
+                subtitle: Text(" "),
+                onTap: () {
+                  Get.to(() => const MtInfo(), arguments: [index,Get.find<SearchMlistController>().msearchNmlist.value]);
+                },
+              );
+            },
+            separatorBuilder: (context, index) {
+              if (index == 0) return SizedBox.shrink();
+              return const Divider();
+            },
+          ),
+          ListView.separated(
+            shrinkWrap: true,
+            itemCount:
+                Get.find<SearchMlistController>().msearchArlist.value.length,
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                leading: Icon(Icons.map),
+                title: Text(Get.find<SearchMlistController>().msearchArlist.value[index].mntnm.toString()),
+                subtitle: Text(" "),
+                onTap: () {
+                  Get.to(() => const MtInfo(), arguments: [index,Get.find<SearchMlistController>().msearchArlist.value]);
+                },
+              );
+            },
+            separatorBuilder: (context, index) {
+              if (index == 0) return SizedBox.shrink();
+              return const Divider();
+            },
+          ),
+        ],
+      ),
     );
   }
 
-   // Future loadData(String text) async => Obx((){
-   //     var result = seachController.fetchSearchlist(text);
-   //     //return result;
-   //  });
+  // Future loadData(String text) async => Obx((){
+  //     var result = seachController.fetchSearchlist(text);
+  //     //return result;
+  //  });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,7 +146,16 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
           child: TextField(
             keyboardType: TextInputType.text,
             onChanged: (text) {
-              //loadData(text);
+              //loadData(text)
+              setState(() {
+                title = text;
+                //Get.find<SearchMlistController>().initList();
+                Get.find<SearchMlistController>().fetchSearchMnlist(text);
+                Get.find<SearchMlistController>().fetchSearchArlist(text);
+                Get.find<SearchMlistController>().update();
+
+
+              });
             },
             decoration: const InputDecoration(
               border: InputBorder.none,
@@ -126,7 +167,7 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
         ),
         bottom: _tabMenu(),
       ),
-      body: _body(),
+      body: _searchList(title),
     );
   }
 }

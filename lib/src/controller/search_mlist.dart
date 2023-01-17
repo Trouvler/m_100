@@ -5,17 +5,33 @@ import '../repository/MListRepository.dart';
 
 class SearchMlistController extends GetxController {
   late MsearchRepository _MsearchRepository;
-  RxList<Ml> mlist = <Ml>[].obs;
+  RxList<Ml> msearchArlist = <Ml>[].obs;
+  RxList<Ml> msearchNmlist = <Ml>[].obs;
+  String? searchItem;
   @override
   void onInit(){
     super.onInit();
     _MsearchRepository = MsearchRepository();
+    //fetchSearchArlist(searchItem);
+    //fetchSearchMnlist(searchItem);
+    print('나는야 퉁퉁이');
 
   }
-  Future fetchSearchlist(String? searchItem) async {
-    var result = await _MsearchRepository.fetchSearchlist(searchItem);
+  Future fetchSearchArlist(String? searchItem) async {
+    var result = await _MsearchRepository.fetchSearchArlist(searchItem);
     if(result.isNotEmpty){
-      mlist.addAll(result);
+      msearchArlist(result);
+    }else{
+      msearchArlist.clear();
+    }
+  }
+
+  Future fetchSearchMnlist(String? searchItem) async {
+    var result = await _MsearchRepository.fetchSearchNmlist(searchItem);
+    if(result.isNotEmpty){
+      msearchNmlist(result);
+    }else{
+      msearchNmlist.clear();
     }
   }
 

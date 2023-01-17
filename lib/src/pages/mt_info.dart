@@ -9,8 +9,9 @@ class MtInfo extends GetView<MlistController> {
   const MtInfo({Key? key}) : super(key: key);
 
   Widget _titleSection() {
-    var index = Get.arguments;
-    var info = controller.mlist;
+    var index = Get.arguments[0];
+    var info = Get.arguments[1];
+    print(info);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: Column(
@@ -91,8 +92,8 @@ class MtInfo extends GetView<MlistController> {
   }
 
   Widget _infoSection() {
-    var index = Get.arguments;
-    var info = controller.mlist;
+    var index = Get.arguments[0];
+    var info = Get.arguments[1];
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 2),

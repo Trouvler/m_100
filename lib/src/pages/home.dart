@@ -83,7 +83,7 @@ class Home extends GetView<MlistController> {
             leading: Icon(Icons.map),
             title: Text(info[index].mntnm.toString()),
             subtitle: Text(info[index].mntnm.toString()),
-            onTap: () {Get.to(() => MtInfo(), arguments: index);},
+            onTap: () {Get.to(() => MtInfo(), arguments: [index, controller.mlist]);},
           );
         },
         separatorBuilder: (context, index) {

@@ -12,7 +12,6 @@ import '../controller/bottom_nav_controller.dart';
 class Mypage extends GetView<MypageController> {
   const Mypage({Key? key}) : super(key: key);
 
-
   Widget _statlisticOne(String title, int value) {
     print("123");
     return Column(
@@ -37,9 +36,6 @@ class Mypage extends GetView<MypageController> {
   }
 
   Widget _infomation() {
-    print("1234");
-    List<dynamic>? mtComList = controller.userinfo.value.mtcomList;
-    List<dynamic>? mtWishList = controller.userinfo.value.mtwishList;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 25),
       child: Obx(
@@ -50,8 +46,7 @@ class Mypage extends GetView<MypageController> {
               children: [
                 AvatarWidget(
                   type: AvatarType.TYPE1,
-                  thumbPath:
-                  controller.targetUser.value.thumbnail!,
+                  thumbPath: controller.targetUser.value.thumbnail!,
                   size: 80,
                 ),
                 const SizedBox(
@@ -61,22 +56,27 @@ class Mypage extends GetView<MypageController> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _statlisticOne('달성',controller.userinfo.value.mtcomList == null ? -1 :controller.userinfo.value.mtcomList!.length),
-                      _statlisticOne('미달성', controller.userinfo.value.mtcomList == null ? -1 :100-controller.userinfo.value.mtcomList!.length),
-                      _statlisticOne('찜', controller.userinfo.value.mtwishList == null ? -1 : controller.userinfo.value.mtwishList!.length),
+                      _statlisticOne(
+                          '달성',
+                          controller.userinfo.value.mtcomList == null
+                              ? -1
+                              : controller.userinfo.value.mtcomList!.length),
+                      _statlisticOne(
+                          '미달성',
+                          controller.userinfo.value.mtcomList == null
+                              ? -1
+                              : 100 -
+                                  controller.userinfo.value.mtcomList!.length),
+                      _statlisticOne(
+                          '찜',
+                          controller.userinfo.value.mtwishList == null
+                              ? -1
+                              : controller.userinfo.value.mtwishList!.length),
                     ],
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 10,),
-            Text(
-              controller.targetUser.value.description!,
-              style: TextStyle(
-                fontSize: 13,
-                color: Colors.black,
-              ),
-            )
           ],
         ),
       ),
@@ -85,28 +85,31 @@ class Mypage extends GetView<MypageController> {
 
   Widget _menu() {
     print("1236");
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-      child: Row(
-        children: [
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 4.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(3),
-                border: Border.all(color: const Color(0xffdedede)),
-              ),
-              child: const Text(
-                '프로필 수정',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 14,
+    return PreferredSize(
+      preferredSize: Size.fromHeight(AppBar().preferredSize.height),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+        child: Row(
+          children: [
+            Expanded(
+              child: Container(
+                padding: const EdgeInsets.symmetric(vertical: 4.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(3),
+                  border: Border.all(color: const Color(0xffdedede)),
                 ),
-                textAlign: TextAlign.center,
+                child: const Text(
+                  '프로필 수정',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
@@ -131,21 +134,38 @@ class Mypage extends GetView<MypageController> {
 
   Widget _tabView() {
     print("123123");
-    return GridView.builder(
-        physics: const NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        itemCount: 100,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          childAspectRatio: 1,
-          mainAxisSpacing: 1,
-          crossAxisSpacing: 1,
-        ),
-        itemBuilder: (BuildContext context, int index) {
-          return Container(
-            color: Colors.grey,
-          );
-        });
+    return TabBarView(
+        controller: controller.tabController,
+        children: [
+      GridView.builder(
+          shrinkWrap: true,
+          itemCount: 100,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            childAspectRatio: 1,
+            mainAxisSpacing: 1,
+            crossAxisSpacing: 1,
+          ),
+          itemBuilder: (BuildContext context, int index) {
+            return Container(
+              color: Colors.grey,
+            );
+          }),
+      GridView.builder(
+          shrinkWrap: true,
+          itemCount: 100,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            childAspectRatio: 1,
+            mainAxisSpacing: 1,
+            crossAxisSpacing: 1,
+          ),
+          itemBuilder: (BuildContext context, int index) {
+            return Container(
+              color: Colors.red,
+            );
+          }),
+    ]);
   }
 
   @override
@@ -186,20 +206,15 @@ class Mypage extends GetView<MypageController> {
               ),
             ),
           ),
-        ],
+        ],bottom: PreferredSize(
+        preferredSize: Size.fromHeight(AppBar().preferredSize.height*4), child: Column(children: [
+        _infomation(),
+        _menu(),
+        _tabMenu(),
+      ],),
+      )
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            _infomation(),
-            _menu(),
-            _tabMenu(),
-            _tabView(),
-          ],
-        ),
-      ),
+      body: _tabView(),
     );
   }
-
-
 }
