@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:m_100/src/components/avatar_widget.dart';
 import 'package:m_100/src/components/image_data.dart';
 import 'package:m_100/src/controller/mlist_controller.dart';
+import 'package:m_100/src/pages/apply.dart';
 
 import 'mt_info.dart';
 
@@ -83,7 +84,9 @@ class Home extends GetView<MlistController> {
             leading: Icon(Icons.map),
             title: Text(info[index].mntnm.toString()),
             subtitle: Text(info[index].mntnm.toString()),
-            onTap: () {Get.to(() => MtInfo(), arguments: [index, controller.mlist]);},
+            onTap: () {
+              Get.to(() => MtInfo(), arguments: [index, controller.mlist]);
+            },
           );
         },
         separatorBuilder: (context, index) {
@@ -120,7 +123,9 @@ class Home extends GetView<MlistController> {
         title: ImageData(IconPath.logo, width: 270),
         actions: [
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Get.to(() => ApplyGift());
+            },
             child: ImageData(
               IconPath.directMessage,
               width: 50,

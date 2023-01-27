@@ -112,8 +112,7 @@ class MtInfo extends GetView<MlistController> {
               ),
             ],
           ),
-          Container(
-              child: Divider(color: Colors.grey, thickness: 1.0)),
+          Container(child: Divider(color: Colors.grey, thickness: 1.0)),
           const SizedBox(height: 5),
           Column(
             children: [
@@ -128,8 +127,7 @@ class MtInfo extends GetView<MlistController> {
               ),
             ],
           ),
-          Container(
-              child: Divider(color: Colors.grey, thickness: 1.0)),
+          Container(child: Divider(color: Colors.grey, thickness: 1.0)),
           const SizedBox(height: 5),
           Column(
             children: [
@@ -144,8 +142,7 @@ class MtInfo extends GetView<MlistController> {
               ),
             ],
           ),
-          Container(
-              child: Divider(color: Colors.grey, thickness: 1.0)),
+          Container(child: Divider(color: Colors.grey, thickness: 1.0)),
           const SizedBox(height: 5),
           Column(
             children: [
@@ -160,8 +157,7 @@ class MtInfo extends GetView<MlistController> {
               ),
             ],
           ),
-          Container(
-              child: Divider(color: Colors.grey, thickness: 1.0)),
+          Container(child: Divider(color: Colors.grey, thickness: 1.0)),
           const SizedBox(height: 5),
           Column(
             children: [
@@ -176,8 +172,7 @@ class MtInfo extends GetView<MlistController> {
               ),
             ],
           ),
-          Container(
-              child: Divider(color: Colors.grey, thickness: 1.0)),
+          Container(child: Divider(color: Colors.grey, thickness: 1.0)),
           const SizedBox(height: 5),
           Column(
             children: [
@@ -192,7 +187,6 @@ class MtInfo extends GetView<MlistController> {
               ),
             ],
           ),
-          
         ],
       ),
     );
@@ -201,20 +195,26 @@ class MtInfo extends GetView<MlistController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          elevation: 1,
-          title: ImageData(IconPath.logo, width: 270),
-          actions: [
-            GestureDetector(
-              onTap: () {},
-              child: ImageData(
-                IconPath.directMessage,
-                width: 50,
-              ),
-            )
-          ],
-        ),
-        body: ListView(
-            children: [_imagePreview(), _titleSection(), _infoSection()]));
+      appBar: AppBar(
+        elevation: 1,
+        title: ImageData(IconPath.logo, width: 270),
+        actions: [
+          GestureDetector(
+            onTap: () {},
+            child: ImageData(
+              IconPath.directMessage,
+              width: 50,
+            ),
+          )
+        ],
+      ),
+      body: ListView(
+        children: [
+          _imagePreview(),
+          _titleSection(),
+          _infoSection(),
+        ],
+      ),
+    );
   }
 }

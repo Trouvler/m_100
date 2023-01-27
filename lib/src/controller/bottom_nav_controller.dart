@@ -68,6 +68,7 @@ class BottomNavController extends GetxController {
         {
 
           _changePage(value, hasGesture: hasGesture);
+          Get.find<MypageController>().increase();
           break;
         }
     }

@@ -12,9 +12,6 @@ class SearchMlistController extends GetxController {
   void onInit(){
     super.onInit();
     _MsearchRepository = MsearchRepository();
-    //fetchSearchArlist(searchItem);
-    //fetchSearchMnlist(searchItem);
-    print('나는야 퉁퉁이');
 
   }
   Future fetchSearchArlist(String? searchItem) async {

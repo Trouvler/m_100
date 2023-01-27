@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:m_100/src/controller/bottom_nav_controller.dart';
 import 'package:m_100/src/controller/mlist_controller.dart';
+import 'package:m_100/src/controller/notice_controller.dart';
 import 'package:m_100/src/controller/search_mlist.dart';
 
 import '../controller/auth_controller.dart';
@@ -12,6 +13,7 @@ class InitBinding extends Bindings{
     Get.put(MlistController(),permanent: true);
     Get.put(BottomNavController(), permanent: true);
     Get.put(AuthController(), permanent: true);
+    Get.put(NoticeController(), permanent: true);
 
   }
 

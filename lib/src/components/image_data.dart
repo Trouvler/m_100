@@ -47,6 +47,7 @@ class IconPath{
   static String get cameraIcon => 'assets/images/camera_icon.jpg';
   static String get uploadComplete => 'assets/images/upload_complete_icon.jpg';
   static String get NFC_img => 'assets/images/nfc.png';
+  static String get complete_img => 'assets/images/COMPLETED.png';
   static String get mypageBottomSheet01 =>
       'assets/images/mypage_bottom_sheet_01.jpg';
   static String get mypageBottomSheet02 =>

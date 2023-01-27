@@ -6,6 +6,7 @@ import 'package:m_100/src/components/avatar_widget.dart';
 import 'package:m_100/src/components/image_data.dart';
 import 'package:m_100/src/controller/auth_controller.dart';
 import 'package:m_100/src/controller/mypage_controller.dart';
+import 'package:m_100/src/pages/apply.dart';
 
 import '../controller/bottom_nav_controller.dart';
 
@@ -93,7 +94,9 @@ class Mypage extends GetView<MypageController> {
           children: [
             Expanded(
               child: InkWell(
-                onTap: () {print('adssad');},
+                onTap: () {
+                  Get.to(()=>ApplyGift(),arguments: controller.userinfo.value);
+                },
                 child: Container(
                   padding: const EdgeInsets.symmetric(vertical: 4.0),
                   decoration: BoxDecoration(
@@ -108,7 +111,6 @@ class Mypage extends GetView<MypageController> {
                     ),
                     textAlign: TextAlign.center,
                   ),
-
                 ),
               ),
             )
@@ -138,43 +140,60 @@ class Mypage extends GetView<MypageController> {
 
   Widget _tabView() {
     print("123123");
-    return TabBarView(
-        controller: controller.tabController,
-        children: [
-      GridView.builder(
-          shrinkWrap: true,
-          itemCount: 100,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            childAspectRatio: 1,
-            mainAxisSpacing: 1,
-            crossAxisSpacing: 1,
-          ),
-          itemBuilder: (BuildContext context, int index) {
-            return InkWell(
-              onTap: (){print("object{$index}");},
-              child: Container(
-                color: Colors.grey,
+    return TabBarView(controller: controller.tabController, children: [
+      Expanded(
+        child: Obx(
+          () => GridView.builder(
+              shrinkWrap: true,
+              itemCount: controller.userinfo.value.mtcomList?.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                childAspectRatio: 1,
+                mainAxisSpacing: 1,
+                crossAxisSpacing: 1,
               ),
-            );
-          }),
-      GridView.builder(
-          shrinkWrap: true,
-          itemCount: 100,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            childAspectRatio: 1,
-            mainAxisSpacing: 1,
-            crossAxisSpacing: 1,
+              itemBuilder: (BuildContext context, int index) {
+                return InkWell(
+                    onTap: () {
+                      print("object{$index}");
+                    },
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          IconPath.complete_img,
+                          fit: BoxFit.fill,
+                        ),
+                        Text(
+                          controller.userinfo.value.mtcomList?[index],
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                        )
+                      ],
+                    ));
+              }),
+        ),
+      ),
+      Expanded(
+        child: Obx(()=> ListView.separated(
+            shrinkWrap: true,
+            itemCount: controller.userinfo.value.mtwishList!.length,
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                leading: Icon(Icons.map),
+                title: Text(controller.userinfo.value.mtwishList?[index]),
+                onTap: () {
+                },
+              );
+            },
+            separatorBuilder: (context, index) {
+              if (index == 0) return SizedBox.shrink();
+              return const Divider();
+            },
           ),
-          itemBuilder: (BuildContext context, int index) {
-            return InkWell(
-              onTap: (){print("object{$index}");},
-              child: Container(
-                color: Colors.red,
-              ),
-            );
-          }),
+        ),
+      ),
     ]);
   }
 
@@ -184,46 +203,49 @@ class Mypage extends GetView<MypageController> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        elevation: 0,
-        title: Obx(
-          () => Text(
-            controller.targetUser.value.nickname ?? '',
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-              color: Colors.black,
-            ),
-          ),
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 5),
-            child: GestureDetector(
-              onTap: () {},
-              child: ImageData(
-                IconPath.uploadIcon,
-                width: 50,
+          elevation: 0,
+          title: Obx(
+            () => Text(
+              controller.targetUser.value.nickname ?? '',
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                color: Colors.black,
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: GestureDetector(
-              onTap: () {},
-              child: ImageData(
-                IconPath.menuIcon,
-                width: 50,
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 5),
+              child: GestureDetector(
+                onTap: () {},
+                child: ImageData(
+                  IconPath.uploadIcon,
+                  width: 50,
+                ),
               ),
             ),
-          ),
-        ],bottom: PreferredSize(
-        preferredSize: Size.fromHeight(AppBar().preferredSize.height*4.1), child: Column(children: [
-        _infomation(),
-        _menu(),
-        _tabMenu(),
-      ],),
-      )
-      ),
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: GestureDetector(
+                onTap: () {},
+                child: ImageData(
+                  IconPath.menuIcon,
+                  width: 50,
+                ),
+              ),
+            ),
+          ],
+          bottom: PreferredSize(
+            preferredSize: Size.fromHeight(AppBar().preferredSize.height * 4.1),
+            child: Column(
+              children: [
+                _infomation(),
+                _menu(),
+                _tabMenu(),
+              ],
+            ),
+          )),
       body: _tabView(),
     );
   }
