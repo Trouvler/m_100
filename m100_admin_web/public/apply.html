@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDUOr4xVZ9oHctAHWMs20k7Sl9IX8kRDzw",
+    authDomain: "mountain-e6a92.firebaseapp.com",
+    projectId: "mountain-e6a92",
+    storageBucket: "mountain-e6a92.appspot.com",
+    messagingSenderId: "1005582649639",
+    appId: "1:1005582649639:web:3af5d22de32bae2cd54102",
+    measurementId: "G-KSZ82RVJES"
+  };
+
+  const app = firebase.initializeApp(firebaseConfig);
+
+  const db = app.firestore();
+
+</script>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100대 명산 신청현황</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">100대 명산</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              신청관리
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">신청</a></li>
+              <li><a class="dropdown-item" href="proceeding.html">진행중</a></li>
+              <!--<li><hr class="dropdown-divider"></li>-->
+              <li><a class="dropdown-item" href="#">진행완료</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="notice.html">공지사항</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">신청현황</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex" role="search" style="margin-left: auto;">
+          <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">이름</th>
+        <th scope="col">주소</th>
+        <th scope="col">연락처</th>
+        <th scope="col">운송장</th>
+      </tr>
+    </thead>
+    <tbody id="ApplyListTable">
+
+    </tbody>
+
+  </table>
+  <script>
+    function getDataFromFireStore(callback) {
+
+      console.log("aaabc")
+      var ApplyListData = [];
+      db.collection('ApplyList').get().then((value) => {
+        value.forEach(element => {
+          ApplyListData.push(element.data());
+          console.log(ApplyListData);
+          console.log(element.data().length);
+        });
+        callback(ApplyListData);
+      });
+
+    }
+    function tableSet(data) {
+      const table = document.getElementById('ApplyListTable')
+      console.log(data);
+      console.log("abdddddddc");
+      for (let i = 0; i < data.length; i++) {
+        var tableTd = '<tr>';
+        var index = i + 1;
+        tableTd += '<td>' + index + '</td>';
+        tableTd += '<td>' + data[i].이름 + '</td>';
+        tableTd += '<td>' + data[i].주소 + '</td>';
+        tableTd += '<td>' + data[i].연락처 + '</td>';
+        tableTd += '<td>'
+        tableTd += '<div class="input-group">'
+        tableTd += '<input type="text" class="form-control-md" placeholder="운송장번호" aria-label="Recipient\' username" aria-describedby="button - addon2">'
+        tableTd += '<button class="btn btn-outline-dark" type="button" id="button-addon2">운송장등록</button>'
+        tableTd += '</div>'
+        tableTd += '</td>'
+        tableTd += '</tr>';
+        table.innerHTML += tableTd;
+        console.log("abc");
+      }
+    }
+    getDataFromFireStore(tableSet);
+  </script>
+
+  <footer class="mt-5 py-3 bg-dark"> <!--card와 검은색 박스 간격을 떼어놓음-->
+    <div class="row">
+      <div class="col-12 col-md">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
+          viewBox="0 0 24 24">
+          <title>Product</title>
+          <circle cx="12" cy="12" r="10" />
+          <path
+            d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+        </svg>
+        <small class="d-block mb-3 text-muted">&copy; 2017–2021</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Cool stuff</a></li>
+          <li><a class="link-secondary" href="#">Random feature</a></li>
+          <li><a class="link-secondary" href="#">Team feature</a></li>
+          <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+          <li><a class="link-secondary" href="#">Another one</a></li>
+          <li><a class="link-secondary" href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Resource name</a></li>
+          <li><a class="link-secondary" href="#">Resource</a></li>
+          <li><a class="link-secondary" href="#">Another resource</a></li>
+          <li><a class="link-secondary" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Business</a></li>
+          <li><a class="link-secondary" href="#">Education</a></li>
+          <li><a class="link-secondary" href="#">Government</a></li>
+          <li><a class="link-secondary" href="#">Gaming</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Team</a></li>
+          <li><a class="link-secondary" href="#">Locations</a></li>
+          <li><a class="link-secondary" href="#">Privacy</a></li>
+          <li><a class="link-secondary" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

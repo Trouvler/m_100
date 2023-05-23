@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "mountain-e6a92",
+    "staging": "mountain-e6a92"
+  },
+  "targets": {},
+  "etags": {}
+}

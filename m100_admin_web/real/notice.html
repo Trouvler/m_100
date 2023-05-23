@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">100대 명산</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  신청관리
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="apply.html">신청</a></li>
+                  <li><a class="dropdown-item" href="proceeding.html">진행중</a></li>
+                  <!--<li><hr class="dropdown-divider"></li>-->
+                  <li><a class="dropdown-item" href="complete.html">진행완료</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="notice.html">공지사항</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <div class="board_wrap">
+      <div class="board_title">
+        <strong>공지사항</strong>
+        <p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
+      </div>
+      <div class="board_list_wrap">
+        <div class="board_list">
+          <div class="top">
+            <div class="num">번호</div>
+            <div class="title">제목</div>
+            <div class="writer">글쓴이</div>
+            <div class="date">작성일</div>
+            <div class="count">조회</div>
+          </div>
+          <div>
+            <div class="num">5</div>
+            <div class="title"><a href="#">글 제목이 들어갑니다.</a></div>
+            <div class="writer">유주희</div>
+            <div class="date">2023.1.19</div>
+            <div class="count">123</div>
+          </div>
+          <div>
+            <div class="num">4</div>
+            <div class="title"><a href="noticeview.html">속보 성승제는 바보다.</a></div>
+            <div class="writer">성승제</div>
+            <div class="date">2023.1.19</div>
+            <div class="count">100</div>
+          </div>
+          <div>
+            <div class="num">3</div>
+            <div class="title"><a href="#">속보! 박규태는 더 바보다.</a></div>
+            <div class="writer">박규태</div>
+            <div class="date">2023.1.19</div>
+            <div class="count">12</div>
+          </div>
+          <div>
+            <div class="num">2</div>
+            <div class="title"><a href="#">둘 다 바보.</a></div>
+            <div class="writer">유주희</div>
+            <div class="date">2023.1.19</div>
+            <div class="count">128</div>
+          </div>
+          <div>
+            <div class="num">1</div>
+            <div class="title"><a href="#">글 제목이 들어갑니다.</a></div>
+            <div class="writer">유주희</div>
+            <div class="date">2023.1.19</div>
+            <div class="count">135</div>
+          </div>
+        </div>
+        <div class="board_page">
+          <a href="#" class="bt first"><<</a>
+          <a href="#" class="bt prev"><</a>
+          <a href="#" class="num on">1</a>
+          <a href="#" class="num">2</a>
+          <a href="#" class="num">3</a>
+          <a href="#" class="num">4</a>
+          <a href="#" class="num">5</a>
+          <a href="#" class="bt next">></a>
+          <a href="#" class="bt last">>></a>
+        </div>
+        <div class="bt_wrap">
+          <a href="noticewrite.html" class="on">등록</a>
+          <!--<a href="#">수정</a>-->
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

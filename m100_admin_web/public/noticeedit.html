@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">100대 명산</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  신청관리
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="apply.html">신청</a></li>
+                  <li><a class="dropdown-item" href="proceeding.html">진행중</a></li>
+                  <!--<li><hr class="dropdown-divider"></li>-->
+                  <li><a class="dropdown-item" href="complete.html">진행완료</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="notice.html">공지사항</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <div class="board_wrap">
+      <div class="board_title">
+        <strong>공지사항</strong>
+        <p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
+      </div>
+      <div class="board_write_wrap">
+        <div class="board_write">
+          <div class="title">
+            <dl>
+                <dt>제목</dt>
+                <dd><input type="text" placeholder="제목 입력" value="글 제목이 들어갑니다."></dd>
+            </dl>
+          </div>
+          <div class="info">
+            <dl>
+                <dt>글쓴이</dt>
+                <dd><input type="text" placeholder="글쓴이 입력" value="성승제"></dd>
+            </dl><dl>
+                <dt>비밀번호</dt>
+                <dd><input type="password" placeholder="비밀번호 입력" value="1234"></dd>
+            </dl>
+          </div>
+          <div class="cont">
+            <textarea placeholder="내용 입력">
+글 내용이 들어갑니다.
+글 내용이 들어갑니다.
+                    글 내용이 들어갑니다.
+글 내용이 들어갑니다.
+                    글 내용이 들어갑니다.
+                    글 내용이 들어갑니다.
+글 내용이 들어갑니다.
+                    글 내용이 들어갑니다.
+            </textarea>
+          </div>
+        </div>
+        <div class="bt_wrap">
+          <a href="noticeview.html" class="on">등록</a>
+          <a href="noticeview.html">취소</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
