@@ -37,22 +37,4 @@ class MListRepository {
     }
   }
 
-  /*Future<List<Ml>>fetchSearchlist(String? searchitem) async{
-    var query = Map<String,String>();
-    if(searchitem != null)query.putIfAbsent('searchMtNm', () => searchitem);
-    var response =
-    await _dio.get('/openapi/service/cultureInfoService/gdTrailInfoOpenAPI',queryParameters:query);
-    final document = XmlDocument.parse(response.data);
-    print(document);
-    final results = document.findAllElements('item');
-
-    print("가가가가가각");
-    print(results);
-    if(results.isNotEmpty){
-      return results.map<Ml>((elements)=>Ml.fromXml(elements)).toList();
-    }else{
-      return Future.value(null);
-    }
-  }*/
-
 }

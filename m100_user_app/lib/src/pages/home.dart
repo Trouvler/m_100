@@ -7,8 +7,37 @@ import 'package:m_100/src/components/avatar_widget.dart';
 import 'package:m_100/src/components/image_data.dart';
 import 'package:m_100/src/controller/mlist_controller.dart';
 import 'package:m_100/src/pages/apply.dart';
+import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
+
 
 import 'mt_info.dart';
+
+
+Future<String> getImageUrl(String imagePath) async {
+  try {
+    firebase_storage.Reference ref =
+    firebase_storage.FirebaseStorage.instance.ref(imagePath);
+    String imageUrl = await ref.getDownloadURL();
+    return imageUrl;
+  } catch (e) {
+    print('이미지 가져오기 오류: $e');
+    throw Exception('이미지 URL을 가져오지 못했습니다.');
+  }
+}
+
+// 이미지 가져오기 예시 사용
+void fetchImage() async {
+  String imagePath = 'moutain/가야산/image1.jpg';
+  String imageUrl = await getImageUrl(imagePath);
+  if (imageUrl != null) {
+    // 이미지 가져오기 성공
+    print('이미지 URL: $imageUrl');
+    // TODO: 이미지를 표시하거나 다른 작업 수행
+  } else {
+    // 이미지 가져오기 실패
+    print('이미지를 가져오지 못했습니다.');
+  }
+}
 
 class Home extends GetView<MlistController> {
   Home({Key? key}) : super(key: key);
@@ -80,8 +109,24 @@ class Home extends GetView<MlistController> {
         shrinkWrap: true,
         itemCount: info.length,
         itemBuilder: (BuildContext context, int index) {
+          String imagePath = 'mountain/${info[index].mntnm}/image1.jpg'; // Firestorage 이미지 경로 설정
+
           return ListTile(
-            leading: Icon(Icons.map),
+            leading: FutureBuilder<String>(
+              future: getImageUrl(imagePath),
+              builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return CircularProgressIndicator(); // 로딩 중 표시
+                } else if (snapshot.hasError) {
+                  return Text('Error'); // 에러 발생 시 표시
+                } else if (snapshot.hasData) {
+                  return Image.network(snapshot.data!,width: 80,
+                    fit: BoxFit.fitWidth,); // 이미지 표시
+                } else {
+                  return SizedBox.shrink(); // 데이터 없음 시 표시하지 않음
+                }
+              },
+            ),
             title: Text(info[index].mntnm.toString()),
             subtitle: Text(info[index].mntnm.toString()),
             onTap: () {

@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 application
-INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:6:4-36:19
-MERGED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
-MERGED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
+INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:6:4-36:19
+MERGED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
+MERGED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\user\.gradle\caches\transforms-3\ea126544dbffa99310ce648c295a384a\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:26:5-71:19
@@ -44,24 +44,24 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\us
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.8.0] C:\Users\user\.gradle\caches\transforms-3\d363e3b5616f580c766e3e2b3c05f27d\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 	android:name
-		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml
 manifest
-ADDED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:1:1-37:12
-INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:1:1-37:12
-INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:1:1-37:12
-INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:1:1-37:12
-MERGED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:1:1-37:12
-MERGED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
-MERGED from [:flutter_plugin_android_lifecycle] C:\Users\user\AndroidStudioProjects\m_100\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:sqflite] C:\Users\user\AndroidStudioProjects\m_100\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:fluttertoast] C:\Users\user\AndroidStudioProjects\m_100\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:path_provider_android] C:\Users\user\AndroidStudioProjects\m_100\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:google_sign_in_android] C:\Users\user\AndroidStudioProjects\m_100\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [:nfc_manager] C:\Users\user\AndroidStudioProjects\m_100\build\nfc_manager\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+ADDED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:1:1-37:12
+INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:1:1-37:12
+INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:1:1-37:12
+INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:1:1-37:12
+MERGED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:1:1-37:12
+MERGED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:fluttertoast] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:path_provider_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:google_sign_in_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:nfc_manager] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\nfc_manager\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\user\.gradle\caches\transforms-3\9baafc8faf7ca496894bd197e67f88be\transformed\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\246793f755122fe14a5802655438cb75\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
@@ -102,29 +102,29 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\user\.gradle
 MERGED from [io.grpc:grpc-android:1.48.1] C:\Users\user\.gradle\caches\transforms-3\16963de5d4f08f9296789464702b29d9\transformed\jetified-grpc-android-1.48.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\user\.gradle\caches\transforms-3\58e3540d7f5a5bac6af9a8f8fab44363\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\user\.gradle\caches\transforms-3\e564f562ddf1e7bad87ac8206b50e367\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\debug\AndroidManifest.xml:1:1-8:12
-INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\debug\AndroidManifest.xml:1:1-8:12
-INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\debug\AndroidManifest.xml:1:1-8:12
+INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\debug\AndroidManifest.xml:1:1-8:12
+INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\debug\AndroidManifest.xml:1:1-8:12
+INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\debug\AndroidManifest.xml:1:1-8:12
 	package
-		ADDED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:2:5-32
-		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\debug\AndroidManifest.xml
+		ADDED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:2:5-32
+		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\debug\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:1:1-37:12
-		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:1:1-37:12
+		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\debug\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:1:1-37:12
-		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:1:1-37:12
+		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:3:5-67
-MERGED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:3:5-67
-MERGED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:3:5-67
-MERGED from [:google_sign_in_android] C:\Users\user\AndroidStudioProjects\m_100\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
-MERGED from [:google_sign_in_android] C:\Users\user\AndroidStudioProjects\m_100\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
+ADDED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:3:5-67
+MERGED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:3:5-67
+MERGED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:3:5-67
+MERGED from [:google_sign_in_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [:google_sign_in_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\user\.gradle\caches\transforms-3\ea126544dbffa99310ce648c295a384a\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\user\.gradle\caches\transforms-3\ea126544dbffa99310ce648c295a384a\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.4.0] C:\Users\user\.gradle\caches\transforms-3\d113a99fde888a0c7352df9a6b5c65bb\transformed\jetified-firebase-firestore-24.4.0\AndroidManifest.xml:13:5-67
@@ -132,37 +132,37 @@ MERGED from [com.google.firebase:firebase-firestore:24.4.0] C:\Users\user\.gradl
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\user\.gradle\caches\transforms-3\9446be040c8f157c2f0e8090503dd6c3\transformed\jetified-firebase-storage-20.1.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\user\.gradle\caches\transforms-3\9446be040c8f157c2f0e8090503dd6c3\transformed\jetified-firebase-storage-20.1.0\AndroidManifest.xml:26:5-67
 	android:name
-		ADDED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:3:22-64
+		ADDED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:3:22-64
 uses-permission#android.permission.NFC
-ADDED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:4:5-62
+ADDED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:4:5-62
 	android:name
-		ADDED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml:4:22-59
+		ADDED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml:4:22-59
 uses-sdk
-INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml
-MERGED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:flutter_plugin_android_lifecycle] C:\Users\user\AndroidStudioProjects\m_100\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:flutter_plugin_android_lifecycle] C:\Users\user\AndroidStudioProjects\m_100\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:sqflite] C:\Users\user\AndroidStudioProjects\m_100\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:sqflite] C:\Users\user\AndroidStudioProjects\m_100\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:fluttertoast] C:\Users\user\AndroidStudioProjects\m_100\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:fluttertoast] C:\Users\user\AndroidStudioProjects\m_100\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:path_provider_android] C:\Users\user\AndroidStudioProjects\m_100\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:path_provider_android] C:\Users\user\AndroidStudioProjects\m_100\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:google_sign_in_android] C:\Users\user\AndroidStudioProjects\m_100\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:google_sign_in_android] C:\Users\user\AndroidStudioProjects\m_100\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:nfc_manager] C:\Users\user\AndroidStudioProjects\m_100\build\nfc_manager\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:nfc_manager] C:\Users\user\AndroidStudioProjects\m_100\build\nfc_manager\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml
+MERGED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:fluttertoast] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:fluttertoast] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:google_sign_in_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:google_sign_in_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:nfc_manager] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\nfc_manager\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:nfc_manager] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\nfc_manager\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\user\.gradle\caches\transforms-3\9baafc8faf7ca496894bd197e67f88be\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\user\.gradle\caches\transforms-3\9baafc8faf7ca496894bd197e67f88be\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\246793f755122fe14a5802655438cb75\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
@@ -243,22 +243,22 @@ MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\user\.g
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\user\.gradle\caches\transforms-3\58e3540d7f5a5bac6af9a8f8fab44363\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\user\.gradle\caches\transforms-3\e564f562ddf1e7bad87ac8206b50e367\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\user\.gradle\caches\transforms-3\e564f562ddf1e7bad87ac8206b50e367\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\debug\AndroidManifest.xml
-INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\debug\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\debug\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\android\app\src\debug\AndroidManifest.xml
+		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\android\app\src\debug\AndroidManifest.xml
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+ADDED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\user\.gradle\caches\transforms-3\ea126544dbffa99310ce648c295a384a\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:64:9-70:19
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\user\.gradle\caches\transforms-3\ea126544dbffa99310ce648c295a384a\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:64:9-70:19
 MERGED from [com.google.firebase:firebase-firestore:24.4.0] C:\Users\user\.gradle\caches\transforms-3\d113a99fde888a0c7352df9a6b5c65bb\transformed\jetified-firebase-firestore-24.4.0\AndroidManifest.xml:16:9-22:19
@@ -274,47 +274,47 @@ MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\user\.gradle\c
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\user\.gradle\caches\transforms-3\be4e127f5c507aa2bbff88d15520e5ed\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:34:13-43
 	android:name
-		ADDED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
+		ADDED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
-ADDED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+		ADDED from [:firebase_auth] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
+		ADDED from [:firebase_storage] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
-ADDED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
+		ADDED from [:cloud_firestore] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
-ADDED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+		ADDED from [:firebase_core] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
 provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
-ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
 	android:grantUriPermissions
-		ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+		ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
 	android:authorities
-		ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
+		ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
 	android:exported
-		ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+		ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
 	android:name
-		ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
+		ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
+ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
 	android:resource
-		ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
+		ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
 	android:name
-		ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+		ADDED from [:image_picker_android] C:\Users\user\AndroidStudioProjects\m_100\m100_user_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 	android:required

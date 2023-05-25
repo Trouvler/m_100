@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:m_100/src/components/image_data.dart';
 
 import '../controller/mlist_controller.dart';
+import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
 class MtInfo extends GetView<MlistController> {
   const MtInfo({Key? key}) : super(key: key);
@@ -55,40 +56,78 @@ class MtInfo extends GetView<MlistController> {
   }
 
   Widget _imagePreview() {
-    return ImageSlideshow(
-      /// Width of the [ImageSlideshow].
-      width: double.infinity,
-      height: 200,
-      initialPage: 0,
-      indicatorColor: Colors.blue,
-      indicatorBackgroundColor: Colors.grey,
+    var index = Get.arguments[0];
+    var info = Get.arguments[1];
+    var mountainName = info[index].mntnm; // 산 이름
 
-      /// Called whenever the page in the center of the viewport changes.
-      onPageChanged: (value) {
-        print('Page changed: $value');
+    return FutureBuilder<List<String>>(
+      future: _getImageUrls(mountainName),
+      builder: (BuildContext context, AsyncSnapshot<List<String>> snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Center(child:CircularProgressIndicator()); // 로딩 중 표시
+        } else if (snapshot.hasError) {
+          return Text('Error'); // 에러 발생 시 표시
+        } else if (snapshot.hasData) {
+          var mountainImages = snapshot.data!;
+
+          return ImageSlideshow(
+            /// Width of the [ImageSlideshow].
+            width: double.infinity,
+            height: 200,
+            initialPage: 0,
+            indicatorColor: Colors.blue,
+            indicatorBackgroundColor: Colors.grey,
+
+            /// Called whenever the page in the center of the viewport changes.
+            onPageChanged: (value) {
+              print('Page changed: $value');
+            },
+
+            /// Auto scroll interval.
+            /// Do not auto scroll with null or 0.
+            autoPlayInterval: 0,
+
+            /// Loops back to first slide.
+            isLoop: true,
+            children: mountainImages.map((imagePath) {
+              return Image.network(
+                imagePath,
+                fit: BoxFit.cover,
+              );
+            }).toList(),
+          );
+        } else {
+          return SizedBox.shrink(); // 데이터 없음 시 표시하지 않음
+        }
       },
-
-      /// Auto scroll interval.
-      /// Do not auto scroll with null or 0.
-      autoPlayInterval: 0,
-
-      /// Loops back to first slide.
-      isLoop: true,
-      children: [
-        Image.network(
-          'https://soichi04.com/wp-content/uploads/2022/08/remove-background-before-qa1.png',
-          fit: BoxFit.cover,
-        ),
-        Image.network(
-          'http://thumbnail.10x10.co.kr/webimage/image/basic600/149/B001497625-2.jpg?cmd=thumb&w=500&h=500&fit=true&ws=false',
-          fit: BoxFit.cover,
-        ),
-        Image.network(
-          'https://i.pinimg.com/originals/5b/71/81/5b7181665b406f117129e04203ddccc4.jpg',
-          fit: BoxFit.cover,
-        ),
-      ],
     );
+  }
+
+  Future<List<String>> _getImageUrls(String mountainName) async {
+    try {
+      var imageCount = 5; // 이미지 파일의 개수
+      var mountainImages = List.generate(
+        imageCount,
+            (index) => 'mountain/$mountainName/image${index + 1}.jpg', // 이미지 경로 리스트 생성
+      );
+
+      var validImageUrls = <String>[];
+      for (var imagePath in mountainImages) {
+        try {
+          firebase_storage.Reference ref =
+          firebase_storage.FirebaseStorage.instance.ref(imagePath);
+          String imageUrl = await ref.getDownloadURL();
+          validImageUrls.add(imageUrl);
+        } catch (e) {
+          print('이미지 가져오기 오류: $e');
+        }
+      }
+
+      return validImageUrls;
+    } catch (e) {
+      print('이미지 URL을 가져오지 못했습니다.: $e');
+      throw Exception('이미지 URL을 가져오지 못했습니다.');
+    }
   }
 
   Widget _infoSection() {
