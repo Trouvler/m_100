@@ -19,8 +19,8 @@ class UserRepository {
     try{
     await FirebaseFirestore.instance
         .collection('users').add(user.toMap());
-    FirebaseFirestore.instance
-        .collection('MtDoneList').doc(user.uid).update({"DoneList":[],"WishList":[]});
+    await FirebaseFirestore.instance
+        .collection('MtDoneList').doc(user.uid).set({"DoneList":[],"WishList":[]});
     return true;
     }catch(e){
       return false;

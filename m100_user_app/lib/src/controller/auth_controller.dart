@@ -51,6 +51,7 @@ class AuthController extends GetxController{
       var result = await UserRepository.signup(signUser);
       if (result){
         loginUser(signUser.uid!);
+
       }
 
     }
