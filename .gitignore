@@ -627,3 +627,5 @@ m100_user_app/build/sqflite/intermediates/incremental/packageReleaseResources/co
 m100_user_app/build/sqflite/intermediates/incremental/packageReleaseResources/merger.xml
 m100_user_app/build/sqflite/intermediates/manifest_merge_blame_file/release/manifest-merger-blame-release-report.txt
 m100_user_app/build/sqflite/outputs/logs/manifest-merger-release-report.txt
+m100_user_app/android/keystore.properties
+m100_user_app/key.jks
