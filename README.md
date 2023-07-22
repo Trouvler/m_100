@@ -13,13 +13,10 @@
 * 해당 어플을 통해서 등산 및 관관 활성화를 도모하며, 이를 통해서 지역 경제 활성화에 기여
 
 
-# APP
-# 개발환경
+## 개발환경
 - 개발언어 : Dart
 - 프레임워크 : Flutter
 - 백엔드 : Firebase
 - 100대명산 등산로 API : 공공데이터 포털
+- https://www.data.go.kr/tcs/dss/selectFileDataDetailView.do?publicDataPk=15112801
 
-# 관리자 WEB
-- 개발언어 : HTML, CSS, JS
-- 백엔드 : firebase
